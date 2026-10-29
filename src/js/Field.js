@@ -13,7 +13,7 @@ export default class Field {
       const cell = document.createElement('div');
       cell.classList.add('cell');
       cell.dataset.index = String(i);
-      this.container.appendChild(cell);
+      this.container.append(cell);
       this.cells.push(cell);
     }
   }

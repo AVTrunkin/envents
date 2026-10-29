@@ -18,8 +18,8 @@ export default class Goblin {
   // Показать в случайной клетке (не той же самой)
   showRandom() {
     const nextIndex = this.field.getRandomIndex(this.currentIndex);
-    // Меняем родителя через appendChild — узел сам покидает старую клетку
-    this.field.getCell(nextIndex).appendChild(this.element);
+    
+    this.field.getCell(nextIndex).append(this.element);
     this.element.classList.remove('hidden');
     this.currentIndex = nextIndex;
   }

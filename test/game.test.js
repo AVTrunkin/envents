@@ -36,7 +36,7 @@ describe('Goblin', () => {
 
   beforeEach(() => {
     board = document.createElement('div');
-    document.body.appendChild(board);
+    document.body.append(board);
   });
 
   afterEach(() => {
