@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background: #1e2129;
+  color: #f2f2f2;
+}
+
+.hud {
+  display: flex;
+  gap: 32px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(4, 110px);
+  gap: 8px;
+  /* Кастомный курсор-молоток. Картинку обрабатывает Webpack. */
+  cursor: url('./img/hammer.png') 8 8, pointer;
+}
+
+.cell {
+  background: #3a3f4b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.goblin {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  user-select: none;
+  cursor: url('./img/hammer.png') 8 8, pointer;
+}
+
+/* Скрытый гоблин не ловит клики */
+.goblin.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 22px;
+  min-height: 28px;
+  color: #ffcf5c;
+}
+
+.restart {
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4a6cf7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.restart:hover { background: #3b57c4; }
